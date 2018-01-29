@@ -1,6 +1,6 @@
 <div class="menuTemplate">
   <div class="links">
-      <a href="../index">Home</a>
+      <a href="/index">Home</a>
       <a href="../machineACafe">Machine a café</a>
       <a href="../formulaire">Formulaire</a>
       <a href="../boisson/listBoisson">Liste boisson</a>
