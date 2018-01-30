@@ -95,6 +95,8 @@ footer p{
 }
 
 .pieces img{
+  max-height: 100%;
+  max-width: 100%;
   margin-top: 2em;
   height: 10em;
 }
@@ -104,6 +106,7 @@ footer p{
 } */
 
 .etat2e, .etat1e, .etat50ct, .etat20ct, .etat10ct, .etat5ct{
+  max-width: 100%;
   margin-top: 2em;
 }
 
