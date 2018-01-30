@@ -67,14 +67,7 @@ html, body {
   margin-left: 10em;
 }
 
-.menuTemplate {
-  background-color: black;
-  height: 2em;
-  text-align: center;
-}
-.menuTemplate  a{
-  color: white;
-}
+
 
 .imageCafe{
   max-width: 100%;
@@ -176,4 +169,22 @@ a:hover .effetPiece, a:focus .effetPiece{
 
 .choixBoisson{
   margin-top: 20px;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  text-align: center;
+}
+.topnav a {
+
+  color: white;
+  height: 2em;
+  text-align: center;
+}
+.topnav a:hover {
+  background-color: grey;
+  color: black;
+}
+.topnav .icon {
+  display: none;
 }
