@@ -1,5 +1,5 @@
-<div class="menuTemplate">
-  <div class="links">
+<nav class="topnav">
+    <div class="links">
       <a href="../">Home</a>
       <a href="../machineACafe">Machine a café</a>
       <a href="../formulaire">Formulaire</a>
@@ -10,5 +10,5 @@
       <a href="../ingredients">Liste des Ingrédients</a>
       <a href="../ventes">Liste des Ventes</a>
       <a href="../gestionMonnaie">Gestion Monnaie</a>
-  </div>
-</div>
+      </div>
+    </nav>
