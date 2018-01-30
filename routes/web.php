@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/index', 'IndexController@bienvenue');
+Route::get('/', 'IndexController@bienvenue');
 
 Route::get('/machineACafe','MachineACafeController@listDrink');
 
