@@ -32,4 +32,5 @@ class BoissonController extends Controller
       $showBoissonsOrder = Boisson::select('prix','nomBoisson')->orderBy('prix')->get();
       return view('/boisson/orderPrix', ['boissons' =>$showBoissonsOrder]);
   }
+
 }
