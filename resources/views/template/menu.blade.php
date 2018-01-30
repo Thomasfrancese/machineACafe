@@ -3,9 +3,9 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/machineACafe')}}">Machine a café</a>
       <a href="{{url('/formulaire')}}">Formulaire</a>
-      <a href="{{url('/listBoisson')}}">Liste boisson</a>
-      <a href="{{url('/orderBoisson')}}">Ordre par nom</a>
-      <a href="{{url('/orderPrix')}}">Ordre par prix</a>
+      <a href="{{url('/boisson/listBoisson')}}">Liste boisson</a>
+      <a href="{{url('/boisson/orderBoisson')}}">Ordre par nom</a>
+      <a href="{{url('/boisson/orderPrix')}}">Ordre par prix</a>
       <a href="{{url('/recettes')}}">Liste des Recettes</a>
       <a href="{{url('/ingredients')}}">Liste des Ingrédients</a>
       <a href="{{url('/ventes')}}">Liste des Ventes</a>
