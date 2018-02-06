@@ -1,15 +1,15 @@
 @extends('template.template')
 @section('titre')
-    formulaire
+    Modifié une boisson
 @endsection
 @section('content')
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h2 class="panel-title">Formulaire choix boisson</h2>
+                <h2 class="panel-title">Modif</h2>
             </div>
             <div class="panel-body">
-                <form action='/boisson/listBoisson' method="post">
+                <form action="{{url('/boisson/listBoisson/')}}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="choixBoisson">Choix boisson</label>

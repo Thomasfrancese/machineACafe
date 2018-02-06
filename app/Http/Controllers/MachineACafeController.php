@@ -17,7 +17,7 @@ class MachineACafeController extends Controller
 
   function showDrink($code)
   {
-    $drink = Boisson::where('codeBoisson' ,[$code])->get();
+    $drink = Boisson::where('id' ,[$code])->get();
 
     return view('boisson.boissons',['detailBoissons' => $drink]);
   }

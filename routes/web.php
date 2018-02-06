@@ -25,14 +25,20 @@ Route::get('/gestionMonnaie','GestionMonnaieController@listMonnaie');
 
 Route::get('/boisson/listBoisson', 'BoissonController@showDrinkList');
 
-Route::get('/boisson/orderBoisson', 'BoissonController@trianom');
+Route::get('/boisson/orderName', 'BoissonController@trianom');
 
-Route::get('/boisson/orderPrix', 'BoissonController@triPrix');
+Route::get('/boisson/orderPrice', 'BoissonController@triPrix');
 
 Route::get('/boisson/{code}', 'MachineACafeController@showDrink');
 
-Route::get('/formulaire', 'FormulaireController@create');
+Route::get('/formulaire', 'BoissonController@create');
 
-Route::post('/result', 'FormulaireController@store');
+Route::post('/boisson/listBoisson', 'BoissonController@store');
+
+Route::get('/formulaireModif/{code}','BoissonController@modif');
+
+Route::post('/boisson/listBoisson', 'BoissonController@update');
+
+//Route::post('/result', 'BoissonController@store');
 
 ?>

@@ -4,7 +4,7 @@
 @endsection
 @section('content')
   @foreach ($detailBoissons as $boisson)
-      <h3>{{$boisson->nomBoisson}}</h3></br>
-      <h3>{{$boisson->prix}}cts</h3>
+      <h3>Nom de la boisson: {{$boisson->nomBoisson}}</h3></br>
+      <h3>Prix de la boisson: {{$boisson->prix}}cts</h3>
   @endforeach
 @endsection
