@@ -52,17 +52,25 @@ class BoissonController extends Controller
 
     public function modif($id)
     {
-        $boisson = Boisson::where('id', $id)->get();
-        return view('formulaireModif');
+        $boisson = Boisson::find($id);
+        return view('formulaireModif', ['boisson' => $boisson]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        $boisson =new Boisson;
+        $boisson = Boisson::find($id);
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
         $boisson->save();
 
+
+        return redirect('/boisson/listBoisson');
+    }
+
+    public function delete($id)
+    {
+        $boisson = Boisson::find($id);
+        $boisson->delete();
 
         return redirect('/boisson/listBoisson');
     }

@@ -37,7 +37,11 @@ Route::post('/boisson/listBoisson', 'BoissonController@store');
 
 Route::get('/formulaireModif/{code}','BoissonController@modif');
 
-Route::post('/boisson/listBoisson', 'BoissonController@update');
+Route::post('/boisson/listBoisson/{id}', 'BoissonController@update')->name('modifBoisson');
+
+//Route::get('/formulaireSupp/{code}','BoissonController@supp');
+
+Route::get('/boisson/listBoisson/{id}', 'BoissonController@delete')->name('suppBoisson');
 
 //Route::post('/result', 'BoissonController@store');
 

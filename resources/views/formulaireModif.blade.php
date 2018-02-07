@@ -9,7 +9,7 @@
                 <h2 class="panel-title">Modif</h2>
             </div>
             <div class="panel-body">
-                <form action="{{url('/boisson/listBoisson/')}}" method="post">
+                <form action="{{route("modifBoisson",[$boisson->id])}}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="choixBoisson">Choix boisson</label>
