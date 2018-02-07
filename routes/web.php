@@ -17,6 +17,10 @@ Route::get('/machineACafe','MachineACafeController@listDrink');
 
 Route::get('/ingredients','IngredientController@listIngredients');
 
+Route::get('/formulaireIngre','IngredientController@create');
+
+Route::post('/ingredients', 'IngredientController@store');
+
 Route::get('/ventes','VenteController@listeVente')->name('vente');
 
 Route::get('/recettes','RecetteController@listRecettes');

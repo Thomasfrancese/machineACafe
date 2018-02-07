@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('titre')
-    formulaire
+    Ajout d'une nouvelle boisson
 @endsection
 @section('content')
     <div class="container">
@@ -12,7 +12,7 @@
                 <form action='/boisson/listBoisson' method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="choixBoisson">Choix boisson</label>
+                        <label for="choixBoisson">Nom de la boisson</label>
                         <input name="drinkName" type="text" class="form-control">
                         </input>
                     </div>
