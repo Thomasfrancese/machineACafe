@@ -29,6 +29,31 @@ class IngredientController extends Controller
 
         return redirect('/ingredients');
     }
+
+    public function ingredientModif($id)
+    {
+        $ingredient = Ingredient::find($id);
+        return view('formulaireIngreModif', ['ingredients' => $ingredient]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $ingredient = Ingredient::find($id);
+        $ingredient->nomIngredient = $request->input('nomIngred');
+        $ingredient->stock = $request->input('quantite');
+        $ingredient->save();
+
+
+        return redirect('/ingredients');
+    }
+
+    public function delete($id)
+    {
+        $ingredient = Ingredient::find($id);
+        $ingredient->delete();
+
+        return redirect('/ingredients');
+    }
 }
 
 ?>

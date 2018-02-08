@@ -53,7 +53,7 @@ class BoissonController extends Controller
     public function modif($id)
     {
         $boisson = Boisson::find($id);
-        return view('formulaireModif', ['boisson' => $boisson]);
+        return view('formulaireModif', ['boissons' => $boisson]);
     }
 
     public function update(Request $request, $id)

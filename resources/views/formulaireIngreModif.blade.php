@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('titre')
-    Modifie {{$boissons->nomBoisson}}
+    Modifie {{$ingredients->nomIngredient}}
 @endsection
 @section('content')
     <div class="container">
@@ -9,16 +9,17 @@
                 <h2 class="panel-title">Modif</h2>
             </div>
             <div class="panel-body">
-                <form action="{{route("modifBoisson",[$boissons->id])}}" method="post">
+                <form action="{{route("modifIngredient",[$ingredients->id])}}" method="post">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="choixBoisson">Choix nom boison</label>
-                        <input name="drinkName" type="text" class="form-control" placeholder="{{$boissons->nomBoisson}}">
+                        <label for="nomIngred">Choix nom ingredients</label>
+                        <input name="nomIngred" type="text" class="form-control"
+                               placeholder="{{$ingredients->nomIngredient}}">
                         </input>
                     </div>
                     <div class="form-group">
-                        <label for="choixPrix">Choix du prix</label>
-                        <input name="choicePrice" type="text" class="form-control" placeholder="{{$boissons->prix}}cts">
+                        <label for="quantite">Quantité</label>
+                        <input name="quantite" type="text" class="form-control" placeholder="{{$ingredients->stock}}">
                         </input>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

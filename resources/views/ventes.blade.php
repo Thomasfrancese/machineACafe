@@ -13,23 +13,28 @@
 @section('content')
     <div class="container">
         <table class="table table-hover table-bordered">
-            <thead>
-            <tr class="active">
-                @foreach ($RetourTab[0] as $titre => $valeur)
-                    <th>{{ $titre}}</th>
+            <tr>
+                <td><b>Id</b></td>
+                <td><b>Nom de la boisson</b></td>
+                <td><b>Nombre de sucre</b></td>
+                <td><b>Prix</b></td>
+                <td><b>Date / Heure</b></td>
+                @foreach ($ventes as $venteTab)
+                    <td>{{ $venteTab->id}}</td>
+                    <td>{{$venteTab->nomBoisson}}</td>
+                    <td>{{$venteTab->sucre}}</td>
+                    <td>{{$venteTab->prix}}</td>
+                    <td>{{$venteTab->date}}</td>
                 @endforeach
 
             </tr>
-            </thead>
-            <tbody>
-            @foreach ($RetourTab as $typeVente => $donneeVente)
-                <tr>
-                    @foreach ($donneeVente as $valeur)
-                        <td>{{ $valeur }}</td>
-                    @endforeach
-                </tr>
-            @endforeach
-            </tbody>
+            {{--@foreach ($RetourTab as $typeVente => $donneeVente)--}}
+            {{--<tr>--}}
+            {{--@foreach ($donneeVente as $valeur)--}}
+            {{--<td>{{ $valeur }}</td>--}}
+            {{--@endforeach--}}
+            {{--</tr>--}}
+            {{--@endforeach--}}
         </table>
         <div class="boutons">
             <button type="button" class="btn btn-default">Gérer les ventes</button>

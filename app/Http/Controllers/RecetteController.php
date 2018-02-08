@@ -1,34 +1,18 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Recette;
+
 class RecetteController extends Controller
 {
-  	function listRecettes() {
-  	$recette = array(
-				'Expresso'	=> array(
-								'café'=>1,
-								'eau'=>1),
-				'Café_long'	=>array
-								(
-								'café'=>2,
-								'eau'=>2
-								),
-				'Thé'		=>array
-								(
-								'thé'=>1,
-								'eau'=>2
-								),
-				'Café au lait'=>array
-								(
-								'café'=>1,
-								'eau'=>2,
-								'lait'=>2
-								),
-  	            );
+    function listRecettes()
+    {
+        $recette = Recette::all();
 
-     return view('recettes',compact('recette'));
+     return view('recette',['recettes' => $recette]);
 	}
 }
+
 ?>
 
     

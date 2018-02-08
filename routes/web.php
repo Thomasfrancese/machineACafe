@@ -15,17 +15,29 @@ Route::get('/', 'IndexController@bienvenue');
 
 Route::get('/machineACafe','MachineACafeController@listDrink');
 
+// Ingredients
+
 Route::get('/ingredients','IngredientController@listIngredients');
 
 Route::get('/formulaireIngre','IngredientController@create');
 
 Route::post('/ingredients', 'IngredientController@store');
 
+Route::get('/formulaireIngreModif/{code}', 'IngredientController@ingredientModif');
+
+Route::post('/ingredients/{id}', 'IngredientController@update')->name('modifIngredient');
+
+Route::get('/ingredients/{id}', 'IngredientController@delete')->name('suppIngredient');
+
+// Vente
+
 Route::get('/ventes','VenteController@listeVente')->name('vente');
 
-Route::get('/recettes','RecetteController@listRecettes');
+Route::get('/recette','RecetteController@listRecettes');
 
 Route::get('/gestionMonnaie','GestionMonnaieController@listMonnaie');
+
+//Boisson
 
 Route::get('/boisson/listBoisson', 'BoissonController@showDrinkList');
 
