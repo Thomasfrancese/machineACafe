@@ -67,6 +67,12 @@ class BoissonController extends Controller
         return redirect('/boisson/listBoisson');
     }
 
+    public function boissonSupp($id)
+    {
+        $boisson = Boisson::find($id);
+        return view('formulaireSupp', ['boissons' => $boisson]);
+    }
+
     public function delete($id)
     {
         $boisson = Boisson::find($id);

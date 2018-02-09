@@ -47,6 +47,12 @@ class IngredientController extends Controller
         return redirect('/ingredients');
     }
 
+    public function ingredientSupp($id)
+    {
+        $ingredient = Ingredient::find($id);
+        return view('formulaireIngreSupp', ['ingredients' => $ingredient]);
+    }
+
     public function delete($id)
     {
         $ingredient = Ingredient::find($id);

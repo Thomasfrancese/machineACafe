@@ -25,15 +25,17 @@ Route::post('/ingredients', 'IngredientController@store');
 
 Route::get('/formulaireIngreModif/{code}', 'IngredientController@ingredientModif');
 
-Route::post('/ingredients/{id}', 'IngredientController@update')->name('modifIngredient');
+Route::put('/ingredients/{id}', 'IngredientController@update')->name('modifIngredient');
 
-Route::get('/ingredients/{id}', 'IngredientController@delete')->name('suppIngredient');
+Route::get('/formulaireIngreSupp/{code}', 'IngredientController@ingredientSupp');
+
+Route::delete('/ingredients/{id}', 'IngredientController@delete')->name('suppIngredient');
 
 // Vente
 
 Route::get('/ventes','VenteController@listeVente')->name('vente');
 
-Route::get('/recette','RecetteController@listRecettes');
+Route::get('/recettes','RecetteController@listRecettes');
 
 Route::get('/gestionMonnaie','GestionMonnaieController@listMonnaie');
 
@@ -53,11 +55,13 @@ Route::post('/boisson/listBoisson', 'BoissonController@store');
 
 Route::get('/formulaireModif/{code}','BoissonController@modif');
 
-Route::post('/boisson/listBoisson/{id}', 'BoissonController@update')->name('modifBoisson');
+Route::put('/boisson/listBoisson/{id}', 'BoissonController@update')->name('modifBoisson');
 
 //Route::get('/formulaireSupp/{code}','BoissonController@supp');
 
-Route::get('/boisson/listBoisson/{id}', 'BoissonController@delete')->name('suppBoisson');
+Route::get('/formulaireSupp/{code}','BoissonController@boissonSupp');
+
+Route::delete('/boisson/listBoisson/{id}', 'BoissonController@delete')->name('suppBoisson');
 
 //Route::post('/result', 'BoissonController@store');
 

@@ -20,7 +20,7 @@
                     <td><a href="{{url('/formulaireModif/'.$drinkOne->id )}}">
                             <button type="button" class="btn btn-success">Modifier</button>
                         </a>
-                        <a href="{{route("suppBoisson",[$drinkOne->id])}}">
+                        <a href="{{url('/formulaireSupp/'.$drinkOne->id)}}">
                             <button type="button" class="btn btn-danger">Supprimer</button>
                         </a></td>
                 </tr>

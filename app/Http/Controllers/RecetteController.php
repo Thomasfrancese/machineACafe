@@ -9,7 +9,7 @@ class RecetteController extends Controller
     {
         $recette = Recette::all();
 
-     return view('recette',['recettes' => $recette]);
+     return view('recettes',['recettes' => $recette]);
 	}
 }
 
