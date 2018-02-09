@@ -41,7 +41,7 @@ Route::get('/gestionMonnaie','GestionMonnaieController@listMonnaie');
 
 //Boisson
 
-Route::get('/boisson/listBoisson', 'BoissonController@showDrinkList');
+Route::get('/boisson/listBoisson', 'BoissonController@showDrinkList')->name('listBoisson');
 
 Route::get('/boisson/orderName', 'BoissonController@trianom');
 

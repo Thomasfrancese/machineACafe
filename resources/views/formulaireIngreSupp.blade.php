@@ -13,7 +13,10 @@
                     {{ csrf_field() }}
                     {{method_field('DELETE')}}
 
-                    <button type="submit" class="btn btn-primary">Supprimer</button>
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                    <a href="{{url('/ingredients')}}">
+                        <button class="btn btn-primary">Annuler</button>
+                    </a>
                 </form>
             </div>
         </div>

@@ -6,5 +6,6 @@
   @foreach ($detailBoissons as $boisson)
       <h3>Nom de la boisson: {{$boisson->nomBoisson}}</h3></br>
       <h3>Prix de la boisson: {{$boisson->prix}}cts</h3>
+      <a href="{{url('/machineACafe')}}"><button class="btn btn-primary">Retour</button></a>
   @endforeach
 @endsection
