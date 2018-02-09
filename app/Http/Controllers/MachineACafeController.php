@@ -36,6 +36,21 @@ class MachineACafeController extends Controller
 
         return view('boisson.boissons', ['detailBoissons' => $drink]);
     }
+//    function create()
+//    {
+//        return view('machineACafe');
+//    }
+//    public function store(Request $request)
+//    {
+//        $select = new Boisson();
+//
+//        $select->nomBoisson = $request->input('nomBoisson');
+//        $select->stock = $request->input('sucre');
+//
+//        $select->save();
+//
+//        return redirect('/machineACafe');
+//    }
 }
 
 ?>

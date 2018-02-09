@@ -15,6 +15,10 @@ Route::get('/', 'IndexController@bienvenue');
 
 Route::get('/machineACafe','MachineACafeController@listDrink');
 
+//Route::get('/machineACafe', 'MachineACafeController@create');
+//
+//Route::post('/machineACafe', 'MachineACafeController@store');
+
 // Ingredients
 
 Route::get('/ingredients','IngredientController@listIngredients');

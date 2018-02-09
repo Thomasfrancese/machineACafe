@@ -9,7 +9,7 @@
                 <h2 class="panel-title">Voulez vous supprimer?</h2>
             </div>
             <div class="panel-body">
-                <a action="{{route("suppBoisson",[$boissons->id])}}" method="post">
+                <form action="{{route("suppBoisson",[$boissons->id])}}" method="post">
                 {{ csrf_field() }}
                 {{method_field('DELETE')}}
             <button type="submit" class="btn btn-danger">Supprimer</button>
