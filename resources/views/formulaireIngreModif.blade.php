@@ -23,7 +23,8 @@
                         <input name="quantite" type="text" class="form-control" placeholder="{{$ingredients->stock}}">
                         </input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Confirmer</button>
+                    <a href="{{url('/boisson/listBoisson')}}"><button class="btn btn-danger">Annuler</button></a>
                 </form>
             </div>
         </div>

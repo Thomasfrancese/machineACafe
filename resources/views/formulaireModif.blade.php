@@ -22,7 +22,8 @@
                         <input name="choicePrice" type="text" class="form-control" placeholder="{{$boissons->prix}}cts">
                         </input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Confirmer</button>
+                    <a href="{{url('/boisson/listBoisson')}}"><button class="btn btn-danger">Annuler</button></a>
                 </form>
             </div>
         </div>
