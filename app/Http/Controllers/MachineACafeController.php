@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Boisson;
+
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
+use App\Vente;
+use App\Boisson;
 
 class MachineACafeController extends Controller
 {
     function listDrink()
     {
-        $drinkChoice = DB::select('select nomBoisson, id, prix from boissons');
-        return view('machineACafe', ['boissons' => $drinkChoice]);
-//        $drinkChoice = Boisson::all();
+//        $drinkChoice = DB::select('select nomBoisson, id, prix from boissons');
 //        return view('machineACafe', ['boissons' => $drinkChoice]);
+        $drinkChoice = Boisson::all();
+        return view('machineACafe', ['boissons' => $drinkChoice]);
     }
 //
 //    function listDrink()
@@ -40,17 +44,21 @@ class MachineACafeController extends Controller
 //    {
 //        return view('machineACafe');
 //    }
-//    public function store(Request $request)
-//    {
-//        $select = new Boisson();
-//
-//        $select->nomBoisson = $request->input('nomBoisson');
-//        $select->stock = $request->input('sucre');
-//
-//        $select->save();
-//
-//        return redirect('/machineACafe');
-//    }
-}
+    public function store(Request $request)
+    {
+        $select = new Vente();
+        $boisson = new Boisson();
+//        $boisson = Boisson::where('id',[request('drinkName')])->get()[0];
+        $select->boisson_id = $request->input('drinkName');
+//        $boisson->prix;
+        $select->sucre = $request->input('sucre');
 
+//        $select->
+//        $select-> = $request->input('sucre');
+        $select->save();
+
+        return redirect('/machineACafe');
+    }
+
+}
 ?>

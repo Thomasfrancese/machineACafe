@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vente extends Model
 {
-    function boissons()
+    protected $fillable = ['sucre'];
+
+    function boisson()
     {
         return $this->belongsTo('App\Boisson');
     }

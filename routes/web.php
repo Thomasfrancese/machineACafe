@@ -13,7 +13,14 @@
 
 Route::get('/', 'IndexController@bienvenue');
 
-Route::get('/machineACafe','MachineACafeController@listDrink');
+Route::get('/machineACafe/','MachineACafeController@listDrink');
+
+//Route::get('/machineACafe/Add', 'MachineACafeController@create');
+
+Route::post('/machineACafe/', 'VenteController@store');
+
+
+//Route::get('/machineACafe','MachineACafeController@createSelect');
 
 //Route::get('/machineACafe', 'MachineACafeController@create');
 //
@@ -38,6 +45,8 @@ Route::delete('/ingredients/{id}', 'IngredientController@delete')->name('suppIng
 // Vente
 
 Route::get('/ventes','VenteController@listeVente')->name('vente');
+
+Route::post('/ventes','VenteController@store')->name('venteAdd');
 
 Route::get('/recettes','RecetteController@listRecettes');
 

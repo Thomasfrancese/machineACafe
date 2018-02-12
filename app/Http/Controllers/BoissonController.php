@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Boisson;
+use App\Vente;
 
 class BoissonController extends Controller
 {
@@ -12,6 +14,12 @@ class BoissonController extends Controller
         $showBoissons = Boisson::all();
 
         return view('/boisson/boissons', ['boissons' => $showBoissons]);
+    }
+    function showDrinkSelect()
+    {
+        $showBoissons = Boisson::all();
+
+        return view('/machineACafe', ['boissonSelect' => $showBoissons]);
     }
 
     function showDrinkList()
@@ -41,13 +49,45 @@ class BoissonController extends Controller
     public function store(Request $request)
     {
         $boisson = new Boisson();
+        $vente = new Vente();
 
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+        $vente->nameDrink = $request->input('drinkName');
+        $vente->sucre = $request->input('sucre');
+        $vente->prix = $request->input('choicePrice');
+//        $vente->boisson_id = $request->input('id');
+//        $vente->boisson_id = $request->input('id');
+
 
         $boisson->save();
+        $vente->save();
 
         return redirect('/boisson/listBoisson');
+    }
+
+    public function createSelect()
+    {
+        return view('machineACafe');
+    }
+
+    public function storeSelect(Request $request)
+    {
+        $boisson = new Boisson();
+        $vente = new Vente();
+
+        $boisson->nomBoisson = $request->input('drinkName');
+        $boisson->prix = $request->input('choicePrice');
+        $vente->nameDrink = $request->input('drinkName');
+        $vente->sucre = $request->input('sucre');
+        $vente->prix = $request->input('choicePrice');
+//        $vente->boisson_id = $request->input('id');
+//        $vente->boisson_id = $request->input('id');
+
+
+        $vente->save();
+
+        return redirect('/machineACafe');
     }
 
     public function modif($id)

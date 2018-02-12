@@ -1,9 +1,5 @@
 @extends('template.template')
 
-@section('image')
-    <a href="ventes"><img class="imageCompte" alt="image de comptes" src="../img/faire-ses-comptes.jpg"/></a>
-@endsection
-
 @section('titre')
     Liste des Ventes
 @endsection
@@ -20,43 +16,17 @@
                 <th><b>Prix</b></th>
                 <th><b>Date / Heure</b></th>
             </tr>
-            @foreach ($ventes as $venteTab)
+            @foreach ($ventes as $vente)
                 <tr>
-                    <td>{{ $venteTab->id}}</td>
-                    <td>{{$venteTab->nameDrink}}</td>
-                    <td>{{$venteTab->sucre}}</td>
-                    <td>{{$venteTab->prix}}</td>
-                    <td>{{$venteTab->date}}</td>
+                    <td>{{$vente->id}}</td>
+                    <td>{{$vente->boisson->nomBoisson}}</td>
+                    <td>{{$vente->sucre}}</td>
+                    {{--<td>@if($vente->boissons()) {{$vente->boisson->prix}} @endif</td>--}}
+                    <td>{{$vente->boisson->prix}}</td>
+                    <td>{{$vente->created_at}}</td>
                 </tr>
             @endforeach
-
-            {{--@foreach ($RetourTab as $typeVente => $donneeVente)--}}
-            {{--<tr>--}}
-            {{--@foreach ($donneeVente as $valeur)--}}
-            {{--<td>{{ $valeur }}</td>--}}
-            {{--@endforeach--}}
-            {{--</tr>--}}
-            {{--@endforeach--}}
         </table>
-        <form action='/ventes' method="post">
-            {{ csrf_field() }}
-            <div class="form-group">
-                <label for="choixBoisson">Nom de la boisson</label>
-                <input name="drinkName" type="text" class="form-control">
-                </input>
-            </div>
-            <div class="form-group">
-                <label for="choixBoisson">Choix sucre</label>
-                <input name="sucre" type="text" class="form-control">
-                </input>
-            </div>
-            <div class="form-group">
-                <label for="choixPrix">Choix du prix</label>
-                <input name="choicePrice" type="text" class="form-control">
-                </input>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
         <div class="boutons">
             <button type="button" class="btn btn-default">Gérer les ventes</button>
         </div>

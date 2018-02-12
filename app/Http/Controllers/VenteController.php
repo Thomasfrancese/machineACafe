@@ -4,27 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Boisson;
 use App\Vente;
-use App\Drink;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
-class VenteController extends Controller{
-/**Affiche toutes les ventes passées */
+class VenteController extends Controller
+{
+    /**Affiche toutes les ventes passées */
 
- public function listeVente() {
-  
-    $venteTab = Vente::all();
+    public function listeVente()
+    {
 
-    return view("ventes",["ventes" => $venteTab]);
-  }
-  public function store(Request $request)
-  {
-      $ventes = new Vente();
-      $boisson = Boisson::whereNom(request('drinkName'))->get()[0];
-      $ventes->boisson_id = $boisson->id;
-      $ventes->sucre = request('sucre');
-      $ventes->save();
-      return redirect('/ventes');
-  }
+            $ventes = Vente::all();
+
+        return view("ventes", ['ventes'=>$ventes]);
+    }
+
+    public function store(Request $request)
+    {
+        $ventes = new Vente();
+        $ventes->sucre = request('sucre');
+        $ventes->boisson_id = request('drinkName');
+        $ventes->save();
+        return redirect('/machineACafe');
+    }
 }
+
 ?>
 
