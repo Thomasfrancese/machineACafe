@@ -12,5 +12,4 @@ class Vente extends Model
     {
         return $this->belongsTo('App\Boisson');
     }
-    //
 }

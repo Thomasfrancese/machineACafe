@@ -17,11 +17,6 @@
                         </input>
                     </div>
                     <div class="form-group">
-                        <label for="choixBoisson">Choix sucre</label>
-                        <input name="sucre" type="text" class="form-control">
-                        </input>
-                    </div>
-                    <div class="form-group">
                         <label for="choixPrix">Choix du prix</label>
                         <input name="choicePrice" type="text" class="form-control">
                         </input>

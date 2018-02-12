@@ -47,7 +47,6 @@ class MachineACafeController extends Controller
     public function store(Request $request)
     {
         $select = new Vente();
-        $boisson = new Boisson();
 //        $boisson = Boisson::where('id',[request('drinkName')])->get()[0];
         $select->boisson_id = $request->input('drinkName');
 //        $boisson->prix;

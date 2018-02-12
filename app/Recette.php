@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recette extends Model
 {
+    function boisson()
+    {
+
+    }
     //
 }
