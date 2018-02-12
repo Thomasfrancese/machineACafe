@@ -15,11 +15,11 @@
             </tr>
             </thead>
         </table>
-        <form action='/machineACafe' method="post">
+        <form action='/ventes' method="post">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="choixBoisson">Selection boisson</label>
-                <select name="drinkName">
+                <select name="drinkName" class="selectpicker">
                     @foreach ($boissons as $drinkName)
                         <option type="text" class="form-control"
                                 value='{{$drinkName->id}}'>{{$drinkName->nomBoisson}}
@@ -29,9 +29,16 @@
             </div>
             <div class="form-group">
                 <label for="choixBoisson">Choix sucre</label>
-                <input name="sucre" type="text" class="form-control">
-                </input>
-
+                <select name="sucre">
+                    <option value="0">Sans sucre</option>
+                    <option value="1">1 sucre</option>
+                    <option value="2">2 sucre</option>
+                    <option value="3">3 sucre</option>
+                    <option value="4">4 sucre</option>
+                    <option value="5">5 sucre</option>
+                </select>
+                {{--<input name="sucre" type="text" class="form-control">--}}
+                {{--</input>--}}
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
