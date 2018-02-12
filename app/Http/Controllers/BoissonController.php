@@ -49,46 +49,46 @@ class BoissonController extends Controller
     public function store(Request $request)
     {
         $boisson = new Boisson();
-        $vente = new Vente();
+//        $vente = new Vente();
 
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
-        $vente->nameDrink = $request->input('drinkName');
-        $vente->sucre = $request->input('sucre');
-        $vente->prix = $request->input('choicePrice');
+//        $vente->nameDrink = $request->input('drinkName');
+//        $vente->sucre = $request->input('sucre');
+//        $vente->prix = $request->input('choicePrice');
 //        $vente->boisson_id = $request->input('id');
 //        $vente->boisson_id = $request->input('id');
 
 
         $boisson->save();
-        $vente->save();
+//        $vente->save();
 
         return redirect('/boisson/listBoisson');
     }
 
-    public function createSelect()
-    {
-        return view('machineACafe');
-    }
-
-    public function storeSelect(Request $request)
-    {
-        $boisson = new Boisson();
-        $vente = new Vente();
-
-        $boisson->nomBoisson = $request->input('drinkName');
-        $boisson->prix = $request->input('choicePrice');
-        $vente->nameDrink = $request->input('drinkName');
-        $vente->sucre = $request->input('sucre');
-        $vente->prix = $request->input('choicePrice');
-//        $vente->boisson_id = $request->input('id');
-//        $vente->boisson_id = $request->input('id');
-
-
-        $vente->save();
-
-        return redirect('/machineACafe');
-    }
+//    public function createSelect()
+//    {
+//        return view('machineACafe');
+//    }
+//
+//    public function storeSelect(Request $request)
+//    {
+//        $boisson = new Boisson();
+//        $vente = new Vente();
+//
+//        $boisson->nomBoisson = $request->input('drinkName');
+//        $boisson->prix = $request->input('choicePrice');
+//        $vente->nameDrink = $request->input('drinkName');
+//        $vente->sucre = $request->input('sucre');
+//        $vente->prix = $request->input('choicePrice');
+////        $vente->boisson_id = $request->input('id');
+////        $vente->boisson_id = $request->input('id');
+//
+//
+//        $vente->save();
+//
+//        return redirect('/machineACafe');
+//    }
 
     public function modif($id)
     {
