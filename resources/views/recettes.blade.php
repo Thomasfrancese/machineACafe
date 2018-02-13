@@ -4,26 +4,23 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="tableauRecette ">
-            <table class="table table-hover">
-                <tr>
-                    <th><b>NomBoisson</b></th>
-                    <th><b>Ingrédients</b></th>
-                    <th><b>Quantité</b></th>
-                </tr>
-                @foreach($recettes as $recetteTab)
-                    <td>{{ $recetteTab->nomBoisson }}</td>
-                    <td>{{ $recetteTab->ingredient }}</td>
-                    <td>{{ $recetteTab->quantite }}</td>
-                    <td><a href="{{url('/formulaireIngreModif/'.$nomIngre->id)}}">
-                            <button type="button" class="btn btn-success">Modifier</button>
-                        </a>
-                        <a href="{{route("suppIngredient",[$nomIngre->id])}}">
-                            <button type="button" class="btn btn-danger">Supprimer</button>
-                        </a></td>
+        <table class="table table-hover text-center">
+            <tr>
+                <th><b>NomBoisson</b></th>
+                <th><b>Ingrédients</b></th>
+                <th><b>Dose</b></th>
+            </tr>
+            @foreach($recettes as $recetteTab)
+                @foreach($recetteTab->ingredient as $ingredient)
+                    <tr>
+                        <td>{{ $recetteTab->nomBoisson }}</td>
+                        <td>{{ $ingredient->nomIngredient }}</td>
+                        <td>{{ $ingredient->pivot->quantite }}</td>
+                    </tr>
                 @endforeach
-            </table>
-        </div>
+            @endforeach
+        </table>
+    </div>
 @endsection
 
 

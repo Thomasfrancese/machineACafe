@@ -14,4 +14,9 @@ class Boisson extends Model
         return $this->hasMany('App\Vente');
     }
 
+    function ingredient()
+    {
+        return $this->belongsToMany('App\Ingredient')->withPivot('quantite');
+    }
+
 }
