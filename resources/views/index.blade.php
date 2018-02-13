@@ -1,6 +1,7 @@
 @extends('template.template')
 @section('titre')
-  La pause s'impose !
+    Bienvenue {{ Auth::user()->name }} !</br>
+    La pause s'impose !
 @endsection
 @section('content')
 
