@@ -1,6 +1,8 @@
 @extends('template.template')
 @section('titre')
-    {{--Bienvenue {{ Auth::user()->name }} !</br>--}}
+        @auth
+    Bienvenue {{ Auth::user()->name }} !</br>
+        @endauth
     La pause s'impose !
 @endsection
 @section('content')
