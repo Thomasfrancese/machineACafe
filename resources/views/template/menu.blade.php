@@ -7,7 +7,6 @@
         <a href="{{url('/ingredients')}}">Liste des Ingrédients</a>
         <a href="{{url('/ventes')}}">Liste des Ventes</a>
         <a href="{{url('/gestionMonnaie')}}">Gestion Monnaie</a>
-        <a href="{{url('/login')}}">LogIn</a>
 
         @if (Route::has('login'))
             @auth
