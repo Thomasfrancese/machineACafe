@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use App\Vente;
 use App\Boisson;
@@ -14,6 +13,7 @@ class MachineACafeController extends Controller
 {
     function listDrink()
     {
+
         $drinkChoice = DB::select('select nomBoisson, id, prix from boissons');
         return view('machineACafe', ['boissons' => $drinkChoice]);
 //        $drinkChoice = Boisson::all();

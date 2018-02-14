@@ -5,9 +5,7 @@
         <a href="{{url('/machineACafe')}}">Machine a café</a>
 
         @if (Route::has('login'))
-
             @auth
-
                 <a href="{{url('/boisson/listBoisson')}}">Liste boisson</a>
                 <a href="{{url('/recettes')}}">Liste des Recettes</a>
                 <a href="{{url('/ingredients')}}">Liste des Ingrédients</a>
@@ -24,7 +22,7 @@
                 <a href="{{ route('register') }}">Register</a>
             @else
                 <a href="{{ route('login') }}">Login</a>
-
+                <a href="{{ route('register') }}">Register</a>
             @endauth
         @endif
     </div>
