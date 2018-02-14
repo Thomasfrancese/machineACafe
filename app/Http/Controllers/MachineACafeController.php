@@ -56,8 +56,9 @@ class MachineACafeController extends Controller
 //        $select-> = $request->input('sucre');
         $select->save();
 
-        return redirect('/machineACafe');
+        return redirect('/machineACafeIndex');
     }
 
 }
+
 ?>

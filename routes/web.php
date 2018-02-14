@@ -21,7 +21,7 @@ Route::get('/machineACafe/','MachineACafeController@listDrink');
 
 //Route::get('/machineACafe/Add', 'MachineACafeController@create');
 
-Route::post('/machineACafe/', 'VenteController@store');
+Route::post('/machineACafeIndex/', 'VenteController@store');
 
 
 //Route::get('/machineACafe','MachineACafeController@createSelect');

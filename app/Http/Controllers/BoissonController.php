@@ -58,6 +58,8 @@ class BoissonController extends Controller
 
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+
+//        $boisson->ingredient->ingredient_id = $request->input('choixIngre');
 //        $ingredient->
 //        $vente->nameDrink = $request->input('drinkName');
 //        $vente->sucre = $request->input('sucre');
