@@ -16,6 +16,21 @@
                         <input name="drinkName" type="text" class="form-control">
                         </input>
                     </div>
+                    {{--<div class="form-group">--}}
+                        {{--<label for="choixIngre">Choix des ingredient</label>--}}
+                        {{--@foreach($ingredients as $ingredient)--}}
+                            {{--<input name="choix" type="radio" class="form-control">--}}
+                            {{--{{$ingredient->nomIngredient}}--}}
+                            {{--</input>--}}
+                            {{--@endforeach--}}
+                            {{--</select>--}}
+
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label for="choixPrix">Nombre de dose</label>--}}
+                        {{--<input name="choicePrice" type="text" class="form-control">--}}
+                        {{--</input>--}}
+                    {{--</div>--}}
                     <div class="form-group">
                         <label for="choixPrix">Choix du prix</label>
                         <input name="choicePrice" type="text" class="form-control">

@@ -14,10 +14,10 @@ class MachineACafeController extends Controller
 {
     function listDrink()
     {
-//        $drinkChoice = DB::select('select nomBoisson, id, prix from boissons');
-//        return view('machineACafe', ['boissons' => $drinkChoice]);
-        $drinkChoice = Boisson::all();
+        $drinkChoice = DB::select('select nomBoisson, id, prix from boissons');
         return view('machineACafe', ['boissons' => $drinkChoice]);
+//        $drinkChoice = Boisson::all();
+//        return view('machineACafe', ['boissons' => $drinkChoice]);
     }
 //
 //    function listDrink()

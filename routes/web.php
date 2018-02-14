@@ -21,7 +21,7 @@ Route::get('/machineACafe/','MachineACafeController@listDrink');
 
 //Route::get('/machineACafe/Add', 'MachineACafeController@create');
 
-Route::post('/machineACafe/', 'VenteController@store')->middleware('auth');
+Route::post('/machineACafe/', 'VenteController@store');
 
 
 //Route::get('/machineACafe','MachineACafeController@createSelect');
@@ -50,7 +50,7 @@ Route::delete('/ingredients/{id}', 'IngredientController@delete')->name('suppIng
 
 Route::get('/ventes','VenteController@listeVente')->name('vente')->middleware('auth');
 
-Route::post('/ventes','VenteController@store')->name('venteAdd')->middleware('auth');
+Route::post('/ventes','VenteController@store')->name('venteAdd');
 
 Route::get('/recettes','RecetteController@listRecettes')->middleware('auth');
 
@@ -67,6 +67,8 @@ Route::get('/boisson/orderPrice', 'BoissonController@triPrix');
 Route::get('/boisson/{code}', 'MachineACafeController@showDrink');
 
 Route::get('/formulaire', 'BoissonController@create')->middleware('auth');
+
+Route::get('/formulaire', 'IngredientController@listIngredientsAdd')->middleware('auth');
 
 Route::post('/boisson/listBoisson', 'BoissonController@store')->middleware('auth');
 

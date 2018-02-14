@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Boisson;
 use App\Vente;
+use App\Ingredient;
 
 class BoissonController extends Controller
 {
@@ -52,10 +53,12 @@ class BoissonController extends Controller
     public function store(Request $request)
     {
         $boisson = new Boisson();
+//        $ingredient = new Ingredient();
 //        $vente = new Vente();
 
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+//        $ingredient->
 //        $vente->nameDrink = $request->input('drinkName');
 //        $vente->sucre = $request->input('sucre');
 //        $vente->prix = $request->input('choicePrice');
