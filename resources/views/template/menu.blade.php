@@ -37,6 +37,7 @@
                         <li class="active"><a href="../">Home</a></li>
                         <li><a href="{{ url('/machineACafe')}}">Machine à Café</a></li>
                         <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
 
                     @endauth
                 @endif
