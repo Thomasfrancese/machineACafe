@@ -5,59 +5,18 @@
 @endsection
 
 @section('content')
-    <style>
-        @media (max-width: 500px) {
-
-            .responsive-table-line td:before {
-                content: attr(data-title);
-            }
-
-            .responsive-table-line table,
-            .responsive-table-line thead,
-            .responsive-table-line tbody,
-            .responsive-table-line th,
-            .responsive-table-line td,
-            .responsive-table-line tr {
-                display: block;
-            }
-
-            .responsive-table-line thead tr {
-                display: none;
-            }
-
-            .responsive-table-line td {
-                position: relative;
-                border: 0px solid transparent;
-                padding-left: 50% !important;
-                white-space: normal;
-                text-align: right;
-            }
-
-            .responsive-table-line td:before {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 45%;
-                padding-right: 15px;
-                height: 100%;
-                white-space: nowrap;
-                text-overflow: ellipsis !important;
-                overflow: hidden !important;
-                text-align: left;
-                background-color: #f8f8f8;
-                padding: 2px;
-            }
-
-        }
-    </style>
     <div class="container">
-        <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
-            <table class="table table-bordered table-condensed table-body-center">
+        <div class="responsive-table-line " style="margin:0px auto;max-width:700px;">
+            <table class="table table-bordered table-condensed table-body-center text-center">
                 <tr>
-                    @foreach ($boissons as $drinkName)
-                        <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td></br>
-                    @endforeach
+                    <th class="text-center">Boisson disponible</th>
                 </tr>
+                    @foreach ($boissons as $drinkName)
+                        <tr>
+                        <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
+                        </tr>
+                    @endforeach
+
             </table>
         </div>
         <form action='/ventes' method="post">
