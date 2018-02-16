@@ -72,8 +72,9 @@ html, body {
 }
 
 .imageCafe{
-  max-width: 33%;
-  max-height: 33%;
+
+  max-width: 50vw;
+  max-height: 50vw;
 }
 
 footer {
