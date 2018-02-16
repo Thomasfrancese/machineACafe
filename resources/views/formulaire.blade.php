@@ -23,7 +23,7 @@
                             {{$ingredient->nomIngredient}}
                             </input>
                             <div class="form-group">
-                                <label for="choixPrix">Nombre de dose</label>
+                                <label for="choixDose">Nombre de dose</label>
                                 <input name="choixDose" type="text" class="form-control">
                                 </input>
                             </div>

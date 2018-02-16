@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Boisson;
-use App\Vente;
 use App\Ingredient;
 
 
@@ -110,6 +109,9 @@ class BoissonController extends Controller
         $boisson = Boisson::find($id);
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+        $boisson->boisson_id = $request->input('drinkName');
+        $boisson->ingredient_id = $request->input('choixIngre');
+        $boisson->quantite = $request->input('choixDose');
         $boisson->save();
 
 

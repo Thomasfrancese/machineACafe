@@ -6,19 +6,17 @@
 
 @section('content')
     <div class="container">
-        <table class="table table-hover">
-            <thead>
+        <table class="table table-hover table-bordered ">
             <tr>
                 @foreach ($boissons as $drinkName)
-                    <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
+                    <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td></br>
                 @endforeach
             </tr>
-            </thead>
         </table>
         <form action='/ventes' method="post">
             {{ csrf_field() }}
             <div class="form-group">
-                <label for="choixBoisson">Selection boisson</label>
+                <label for="choixBoisson">Selection boisson</label></br>
                 <select name="drinkName" class="selectpicker">
                     @foreach ($boissons as $drinkName)
                         <option type="text" class="form-control"
@@ -28,7 +26,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="choixBoisson">Choix sucre</label>
+                <label for="choixBoisson">Choix sucre</label></br>
                 <select name="sucre">
                     <option value="0">Sans sucre</option>
                     <option value="1">1 sucre</option>
