@@ -16,6 +16,8 @@
 
                 @if (Route::has('login'))
                     @auth
+                        <li class="active"><a href="../">Home</a></li>
+                        <li><a href="{{ url('/machineACafe')}}">Machine à Café</a></li>
                         <li><a href="{{url('/boisson/listBoisson')}}">Liste boisson</a></li>
                         <li><a href="{{url('/recettes')}}">Liste des Recettes</a></li>
                         <li><a href="{{url('/ingredients')}}">Liste des Ingrédients</a></li>
