@@ -12,6 +12,12 @@ class IngredientController extends Controller
 
         return view('ingredients', ['ingredients' => $showIngredients]);
     }
+    function listIngredientsAdd()
+    {
+        $showIngredients = Ingredient::all();
+
+        return view('formulaire', ['ingredients' => $showIngredients]);
+    }
 
     public function create()
     {

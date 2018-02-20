@@ -6,19 +6,22 @@
 
 @section('content')
     <div class="container">
-        <table class="table table-hover">
-            <tr>
-                <th><b>Boisson disponible</b></th>
-            </tr>
-            @foreach ($boissons as $drinkName)
-                <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
-            @endforeach
-
-        </table>
+        <div class="responsive-table-line " style="margin:0px auto;max-width:700px;">
+            <table class="table table-bordered table-condensed table-body-center text-center">
+                <tr>
+                    <th class="text-center">Boisson disponible</th>
+                </tr>
+                @foreach ($boissons as $drinkName)
+                    <tr>
+                        <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
         <form action='/ventes' method="post">
             {{ csrf_field() }}
             <div class="form-group">
-                <label for="choixBoisson">Selection boisson</label>
+                <label for="choixBoisson">Selection boisson</label></br>
                 <select name="drinkName" class="selectpicker">
                     @foreach ($boissons as $drinkName)
                         <option type="text" class="form-control"
@@ -28,7 +31,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="choixBoisson">Choix sucre</label>
+                <label for="choixBoisson">Choix sucre</label></br>
                 <select name="sucre">
                     <option value="0">Sans sucre</option>
                     <option value="1">1 sucre</option>
@@ -43,5 +46,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
 @endsection

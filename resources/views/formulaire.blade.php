@@ -17,6 +17,22 @@
                         </input>
                     </div>
                     <div class="form-group">
+                        <label for="choixIngre">Choix des ingredient</label>
+                        @foreach($ingredients as $ingredient)
+                            <input name="choixIngre" value="{{$ingredient->id}}" type="checkbox" class="form-control">
+                            {{$ingredient->nomIngredient}}
+                            </input>
+                            <div class="form-group">
+                                <label for="choixDose">Nombre de dose</label>
+                                <input name="choixDose" type="text" class="form-control">
+                                </input>
+                            </div>
+                            @endforeach
+                            </select>
+
+                    </div>
+
+                    <div class="form-group">
                         <label for="choixPrix">Choix du prix</label>
                         <input name="choicePrice" type="text" class="form-control">
                         </input>

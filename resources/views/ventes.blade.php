@@ -7,7 +7,19 @@
 
 
 @section('content')
-    <div class="container">
+    <style>
+        #tableauVente{
+            margin:10px auto;
+            width:100%;
+            min-width:400px;
+            max-width:700px;
+        }
+        #tableauVente table{
+            margin:0px;
+            width:100%;
+        }
+    </style>
+    <div class="container table-responsive tableauVente">
         <table class="table table-hover table-bordered text-center">
             <tr>
                 <th><b>Numéro de vente</b></th>
@@ -27,8 +39,7 @@
                 </tr>
             @endforeach
         </table>
-        <div class="boutons">
-            <button type="button" class="btn btn-default">Gérer les ventes</button>
-        </div>
+
     </div>
+
 @endsection

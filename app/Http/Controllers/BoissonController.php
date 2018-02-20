@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Boisson;
-use App\Vente;
+use App\Ingredient;
+
 
 class BoissonController extends Controller
 {
@@ -51,11 +51,16 @@ class BoissonController extends Controller
 
     public function store(Request $request)
     {
+
         $boisson = new Boisson();
+//        $ingredient = new Ingredient();
 //        $vente = new Vente();
 
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+
+//        $boisson->ingredient->ingredient_id = $request->input('choixIngre');
+//        $ingredient->
 //        $vente->nameDrink = $request->input('drinkName');
 //        $vente->sucre = $request->input('sucre');
 //        $vente->prix = $request->input('choicePrice');
@@ -104,6 +109,9 @@ class BoissonController extends Controller
         $boisson = Boisson::find($id);
         $boisson->nomBoisson = $request->input('drinkName');
         $boisson->prix = $request->input('choicePrice');
+        $boisson->boisson_id = $request->input('drinkName');
+        $boisson->ingredient_id = $request->input('choixIngre');
+        $boisson->quantite = $request->input('choixDose');
         $boisson->save();
 
 
