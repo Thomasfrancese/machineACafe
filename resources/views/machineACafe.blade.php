@@ -7,13 +7,13 @@
 @section('content')
     <div class="container">
         <table class="table table-hover">
-            <thead>
             <tr>
-                @foreach ($boissons as $drinkName)
-                    <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
-                @endforeach
+                <th><b>Boisson disponible</b></th>
             </tr>
-            </thead>
+            @foreach ($boissons as $drinkName)
+                <td><a href="/boisson/{{$drinkName->id}}">{{$drinkName->nomBoisson}}</a></td>
+            @endforeach
+
         </table>
         <form action='/ventes' method="post">
             {{ csrf_field() }}
